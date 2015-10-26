@@ -1,0 +1,61 @@
+[{
+      "usrname": "Jack1",
+      "fname": "Peter1",
+      "lname": "Aackson1",
+      "status": "Available",
+      "last": "10/17/2015",
+      "email": "pj@123.com",
+      "birthday": "01/02/1985",
+      "bio": "hi",
+      "prioritized": false
+}, {
+      "usrname": "Jack2",
+      "fname": "Peter2",
+      "lname": "Cackson2",
+      "status": "busy",
+      "last": "10/17/2015",
+      "email": "pj@123.com",
+      "birthday": "01/02/1985",
+      "bio": "hi",
+      "prioritized": false
+}, {
+      "usrname": "Jack3",
+      "fname": "Peter3",
+      "lname": "Backson3",
+      "status": "idle",
+      "last": "10/17/2015",
+      "email": "pj@123.com",
+      "birthday": "01/02/1985",
+      "bio": "hi",
+      "prioritized": true
+}, {
+      "usrname": "Jack4",
+      "fname": "Peter4",
+      "lname": "Jackson4",
+      "status": "offline",
+      "last": "10/17/2015",
+      "email": "pj@123.com",
+      "birthday": "01/02/1985",
+      "bio": "hi",
+      "prioritized": false
+}, {
+      "usrname": "Jack5",
+      "fname": "Peter5",
+      "lname": "Dackson5",
+      "status": "Available",
+      "last": "10/17/2015",
+      "email": "pj@123.com",
+      "birthday": "01/02/1985",
+      "bio": "hi",
+      "prioritized": false
+}, {
+      "usrname": "Jack6",
+      "fname": "Peter6",
+      "lname": "Eackson6",
+      "status": "Available",
+      "last": "10/17/2015",
+      "email": "pj@123.com",
+      "birthday": "01/02/1985",
+      "bio": "hi",
+      "prioritized": false
+}]

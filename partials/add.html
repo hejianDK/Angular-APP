@@ -1,0 +1,30 @@
+<div class="modal-body">
+    <form>
+        <label>Username:</label>
+        <input type="text" ng-model="newBuddy.usrname" class="form-control">
+        </br>
+        <label>FName:</label>
+        <input type="text" ng-model="newBuddy.fname" class="form-control">
+        </br>
+        <label>LName:</label>
+        <input type="text" ng-model="newBuddy.lname" class="form-control">
+        </br>
+        <label>Email:</label>
+        <input type="email" ng-model="newBuddy.email" class="form-control">
+        </br>
+        <label>BDay:</label>
+        <input type="date" ng-model="newBuddy.birthday" class="form-control">
+        </br>
+        <label>Bio:</label>
+        <input type="text" ng-model="newBuddy.bio" class="form-control">
+        </br>
+        <label>Prioritized:</label>
+        <input type="checkbox" ng-model="newBuddy.prioritized">
+        </br>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" ng-click="submit()">Submit</button>
+    <button type="button" class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    
+</div>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="home">
+
+<head>
+    <title>Route Example</title>
+    <link rel="stylesheet" type="text/css" href="source/bootstrap-3.3.5-dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div ng-controller="homeCtrl">
+        <div class="col-md-12">
+            <label>Buddy List</label>
+            </br>
+            <table>
+                <tr ng-repeat="buddy in b">
+                    <td>{{buddy.usrname}}</td>
+                    <td>
+                        <input type="button" class="btn btn-primary" value="Hide" data-ng-click="removeRow($index)" />
+                    </td>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <label>Search:
+                    <input ng-model="search.$">
+                </label>
+                <label>Username only
+                    <input ng-model="search.usrname">
+                </label>
+                <br>
+                <ul ng-repeat="buddy in buddies|orderBy:'lname'| filter:search" ng-show="buddy.prioritized">
+                    <li>
+                        <span>Username: {{buddy.usrname}}</span>
+                        <span>Firstname: {{buddy.fname}}</span>
+                        <span>Lastname: {{buddy.lname}}</span>
+                        <span>Status: {{buddy.status}}</span>
+                        <span ng-show="buddy.status =='offline'">Last Signin Date: {{buddy.last}}</span> | Prioritized?
+                        <input type="checkbox" ng-model="buddy.prioritized">
+                        <button  class="btn btn-primary" ng-click="isTrue=!isTrue">expand</button>
+                        <input type="button" class="btn btn-primary" value="Remove" ng-click="removeRow(buddy.usrname)" />
+                    </li>
+                    <li ng-show="isTrue">
+                        <span>Email: {{buddy.email}}</span>
+                        <span>Birthday: {{buddy.birthday}}</span>
+                        <span>Bio: {{buddy.bio}}</span>
+                    </li>
+                </ul>
+                <ul ng-repeat="buddy in buddies|orderBy:'lname'| filter:search" ng-hide="buddy.prioritized">
+                    <li>
+                        <span>Username: {{buddy.usrname}}</span>
+                        <span>Firstname: {{buddy.fname}}</span>
+                        <span>Lastname: {{buddy.lname}}</span>
+                        <span>Status: {{buddy.status}}</span>
+                        <span ng-show="buddy.status =='offline'">Last Signin Date: {{buddy.last}}</span> | Prioritized?
+                        <input type="checkbox" ng-model="buddy.prioritized">
+                        <button  class="btn btn-primary" ng-click="isTrue=!isTrue">expand</button>
+                        <input type="button" class="btn btn-primary" value="Remove" ng-click="removeRow(buddy.usrname)" />
+                    </li>
+                    <li ng-show="isTrue">
+                        <span>Email: {{buddy.email}}</span>
+                        <span>Birthday: {{buddy.birthday}}</span>
+                        <span>Bio: {{buddy.bio}}</span>
+                    </li>
+                </ul>
+            </div>
+                <button type="button" class="btn btn-primary" ng-click="open()"> Add</button>
+           
+        </div>
+    </div>
+
+    <script type="text/javascript" src="source/angular-1.4.4/angular.js"></script>
+    <script type="text/javascript" src="source/bootstrap-3.3.5-dist/js/ui-bootstrap-tpls-0.13.3.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.2.js"></script>
+    <script type="text/javascript" src="source/angular-1.4.4/angular-route.js"></script>
+    <script type="text/javascript" src="source/angular-1.4.4/angular-resource.js"></script>
+    <!-- other controller js
+ -->
+    <script type="text/javascript" src="controller/home.js"></script>
+    <script type="text/javascript" src="factory/factory.js"></script>
+</body>
+
+</html>
